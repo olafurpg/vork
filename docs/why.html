@@ -227,14 +227,14 @@ res0: scala.concurrent.<span class="hljs-type">Future</span>[<span class="hljs-t
 <p>mdoc renders variables like <code>@VERSION@</code> into <code>0.0.0</code>. This makes it easy to
 keep documentation up-to-date as new releases are published. Variables can be
 passed from the command-line interface with the syntax <code>--site.VARIABLE=value</code>.</p>
-<pre><code class="hljs"><span class="hljs-selector-tag">mdoc</span> <span class="hljs-selector-tag">--site</span><span class="hljs-selector-class">.VERSION</span> 1<span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.0</span> <span class="hljs-selector-tag">--site</span><span class="hljs-selector-class">.SCALA_VERSION</span> 2<span class="hljs-selector-class">.12</span><span class="hljs-selector-class">.12</span>
+<pre><code class="hljs"><span class="hljs-selector-tag">mdoc</span> <span class="hljs-selector-tag">--site</span><span class="hljs-selector-class">.VERSION</span> 1<span class="hljs-selector-class">.0</span><span class="hljs-selector-class">.0</span> <span class="hljs-selector-tag">--site</span><span class="hljs-selector-class">.SCALA_VERSION</span> 2<span class="hljs-selector-class">.12</span><span class="hljs-selector-class">.13</span>
 </code></pre>
 <p>When using the library API, variables are passed with the
 <code>MainSettings.withSiteVariables(Map[String, String])</code> method</p>
 <pre><code class="hljs css language-diff"> val settings = mdoc.MainSettings()
 <span class="hljs-addition">+  .withSiteVariables(Map(</span>
 <span class="hljs-addition">+    "VERSION" -&gt; "1.0.0",</span>
-<span class="hljs-addition">+    "SCALA_VERSION" -&gt; "2.12.12"</span>
+<span class="hljs-addition">+    "SCALA_VERSION" -&gt; "2.12.13"</span>
 <span class="hljs-addition">+  ))</span>
 </code></pre>
 <p>When using sbt-mdoc, variables are defined with the <code>mdocVariables</code> setting.</p>
@@ -277,7 +277,7 @@ rendered markdown.</li>
 has a <code>mdoc:scalafmt</code> modifier to show before/after code examples with a given
 configuration.</li>
 </ul>
-</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/mdoc/docs/installation.html"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/mdoc/docs/tut.html"><span>Coming from tut</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#performance">Performance</a></li><li><a href="#good-error-messages">Good error messages</a></li><li><a href="#link-hygiene">Link hygiene</a></li><li><a href="#program-semantics">Program semantics</a></li><li><a href="#variable-injection">Variable injection</a></li><li><a href="#extensibility">Extensibility</a></li></ul></nav></div><footer class="nav-footer" id="footer" style="background-color:#7F4623"><section class="sitemap"><a href="/mdoc/" class="nav-home"><img src="/mdoc/img/mdoc-logo.png" alt="mdoc" width="66" height="58"/></a><div><h5>Docs</h5><a href="/mdoc/docs/installation.html">Get started</a></div><div><h5>Community</h5><a href="https://gitter.im/scalameta/mdoc" target="_blank">Chat on Gitter</a></div><div><h5>More</h5><a href="https://github.com/scalameta/mdoc" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2020 mdoc developers</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
+</span></div></article></div><div class="docs-prevnext"><a class="docs-prev button" href="/mdoc/docs/installation.html"><span class="arrow-prev">← </span><span>Installation</span></a><a class="docs-next button" href="/mdoc/docs/tut.html"><span>Coming from tut</span><span class="arrow-next"> →</span></a></div></div></div><nav class="onPageNav"><ul class="toc-headings"><li><a href="#performance">Performance</a></li><li><a href="#good-error-messages">Good error messages</a></li><li><a href="#link-hygiene">Link hygiene</a></li><li><a href="#program-semantics">Program semantics</a></li><li><a href="#variable-injection">Variable injection</a></li><li><a href="#extensibility">Extensibility</a></li></ul></nav></div><footer class="nav-footer" id="footer" style="background-color:#7F4623"><section class="sitemap"><a href="/mdoc/" class="nav-home"><img src="/mdoc/img/mdoc-logo.png" alt="mdoc" width="66" height="58"/></a><div><h5>Docs</h5><a href="/mdoc/docs/installation.html">Get started</a></div><div><h5>Community</h5><a href="https://gitter.im/scalameta/mdoc" target="_blank">Chat on Gitter</a></div><div><h5>More</h5><a href="https://github.com/scalameta/mdoc" target="_blank">GitHub</a></div></section><section class="copyright">Copyright © 2021 mdoc developers</section></footer></div><script type="text/javascript" src="https://cdn.jsdelivr.net/docsearch.js/1/docsearch.min.js"></script><script>
                 document.addEventListener('keyup', function(e) {
                   if (e.target !== document.body) {
                     return;
